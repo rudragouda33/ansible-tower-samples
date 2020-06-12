@@ -1,0 +1,6 @@
+- name: Sudo access to users
+  hosts: all
+  tasks:
+    - name: capture output of id command
+      command: sudo usermod -aG wheel rudragow
+      register: login
